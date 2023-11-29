@@ -1,5 +1,5 @@
-import { signUpUser } from './4-user-promise';
-import { uploadPhoto } from './5-photo-reject';
+import signUpUser from './4-user-promise';
+import uploadPhoto from './5-photo-reject';
 
 export default function handleProfileSignup(firstName, lastName, fileName) {
   return Promise
@@ -7,7 +7,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     .then((res) => {
       res.map((r) => ({
         status: r.status,
-        value: r.status === 'fulfilled' ? r.value : String(r.reason)
-      }))
+        value: r.status === 'fulfilled' ? r.value : String(r.reason),
+      }));
     });
 }
