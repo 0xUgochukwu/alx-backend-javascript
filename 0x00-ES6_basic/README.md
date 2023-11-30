@@ -2,4 +2,4 @@
 
 ## Backend Engineering w/ Javascript
 
-### Promises 
+### ES6 Basics 
