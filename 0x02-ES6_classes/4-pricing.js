@@ -17,16 +17,10 @@ export default class Pricing {
     this._amount = value;
   }
 
-  /**
-   * @returns {Currency}
-   */
   get currency() {
     return this._currency;
   }
 
-  /**
-   * @param {Currency} value
-   */
   set currency(value) {
     if (!(value instanceof Currency)) {
       throw new TypeError('currency must be a Currency');
