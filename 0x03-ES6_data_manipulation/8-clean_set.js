@@ -7,8 +7,7 @@ export default function cleanSet(set, startString) {
 
   return [...set]
     .filter((el) => (
-      typeof el === 'string' && el.startsWith(startString) && el.substring(len))
-    )
+      typeof el === 'string' && el.startsWith(startString) && el.substring(len)))
     .map((el) => el.substring(len))
     .join('-');
 }
