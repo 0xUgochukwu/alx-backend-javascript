@@ -22,9 +22,9 @@ const countStudents = (path) => {
     for (const field of Object.keys(fields)) {
       const { count, students } = fields[field];
       console.log(
-                `Number of students in ${field}: ${count}. List: ${students.join(
-                    ', '
-                )}`
+        `Number of students in ${field}: ${count}. List: ${students.join(
+          ', '
+        )}`
       );
     }
   } catch (e) {
@@ -32,5 +32,4 @@ const countStudents = (path) => {
   }
 };
 
-countStudents('database.csv');
 module.exports = countStudents;
