@@ -11,7 +11,10 @@ const countStudents = (path) => {
       .readFileSync(path, 'utf8')
       .toString('utf-8')
       .trim();
-    const students = data.split('\n').filter((student) => student).slice(1);
+    const students = data
+      .split('\n')
+      .filter((student) => student)
+      .slice(1);
     const fields = {};
     for (const student of students) {
       const studentData = student.split(',');
@@ -29,10 +32,7 @@ const countStudents = (path) => {
     console.log(`Number of students: ${students.length}`);
     for (const field of Object.keys(fields)) {
       const { count, students } = fields[field];
-      console.log(
-        `Number of students in ${field}: ${count}. List: ${students.join(
-          ', '
-        )}`
+      console.log(`Number of students in ${field}: ${count}. List: ${students.join(', ')}`
       );
     }
   } catch (e) {
